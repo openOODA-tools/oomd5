@@ -1,0 +1,14 @@
+Source: oomd5
+Section: utils
+Priority: optional
+Maintainer: openOODA-tools <ops@openooda.org>
+Standards-Version: 4.6.2
+Build-Depends: debhelper-compat (= 13)
+
+Package: oomd5
+Architecture: amd64
+Depends: libc6
+Description: MD5 LEGACY
+ Legacy MD5 hash calculator for verifying legacy file distribution manifests.
+ Capability-bounded openOODA utility with zero ambient authority,
+ oote theme palettes, and native Model Context Protocol (MCP) surface.

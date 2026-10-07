@@ -1,0 +1,21 @@
+# Maintainer: openOODA-tools <ops@openooda.org>
+pkgname=oomd5-bin
+_pkgname=oomd5
+pkgver=0.1.0
+pkgrel=1
+pkgdesc="Legacy MD5 hash calculator for verifying legacy file distribution manifests."
+arch=('x86_64')
+url="https://github.com/openOODA-tools/oomd5"
+license=('Apache-2.0')
+depends=('glibc')
+provides=('oomd5')
+conflicts=('oomd5')
+source_x86_64=("${url}/releases/download/v${pkgver}/oomd5-linux-x86_64"
+               "uninstall.sh::https://raw.githubusercontent.com/openOODA-tools/${_pkgname}/v${pkgver}/uninstall.sh")
+sha256sums_x86_64=('SKIP'
+                   'SKIP')
+
+package() {
+    install -Dm755 "${srcdir}/oomd5-linux-x86_64" "${pkgdir}/usr/bin/oomd5"
+    install -Dm755 uninstall.sh "${pkgdir}/usr/bin/oomd5-uninstall"
+}
